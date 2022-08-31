@@ -114,14 +114,22 @@ body {
    
     
     
-    
 }
 .menu-link{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
    color: var(--primary-text-dark-color);
+
 }
+/* .menu-link:hover::after{
+    content: "";
+    background-color: #000000;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+ 
+} */
 .menu-link:hover,
 .menu-link:focus
 {
