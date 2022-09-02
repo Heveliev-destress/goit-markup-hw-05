@@ -34,6 +34,9 @@
     --client-logo-border-color:#AFB1B8;
     --footer-social-background-color:#44454E;
     --footer-social-icon-color:#FFFFFF;
+    --overlay-background-color:rgba(33, 150, 243, 0.9);
+    --transition-duration:250ms;
+    --transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
@@ -120,6 +123,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
    color: var(--primary-text-dark-color);
+   /* transition: color var(--transition-duration) var(--transition-timing-function) ; */
 
 }
 /* .menu-link:hover::after{
@@ -152,6 +156,8 @@ body {
     display: flex;
     align-items: center;
     column-gap: 10px;
+    /* transition: color var(--transition-duration) var(--transition-timing-function) ; */
+
 }
 .icon-email{ 
     width:16px ; height: 12px;
@@ -165,11 +171,15 @@ fill: var(--header-icon-color);}
     display: flex;
     column-gap: 10px;
     align-items: center;
+    /* transition: color 3s var(--transition-timing-function), 
+    fill 3s var(--transition-timing-function) ; */
+
 
 }
 .icon-phone{
     fill: var(--header-icon-color);
      width: 10px; height: 16px;
+
     }
 
 .header-email:hover,
@@ -180,7 +190,9 @@ color:var(--accent-color);
 
 }
 .header-email:hover .icon-email,
-.header-email:focus .icon-email{
+.header-email:focus .icon-email,
+.header-phone-number:focus .icon-phone,
+.header-phone-number:hover .icon-phone{
     fill: var(--accent-color);
 }
 /*=======/header======*/
@@ -230,6 +242,8 @@ color:var(--accent-color);
     letter-spacing: 0.06em;
     background-color: var(--modal-btn-background-color);
     color: var(--text-light-color);
+    /* transition: background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function) ; */
   
 }
 .modal_open_btn:hover,
@@ -333,6 +347,8 @@ color:var(--accent-color);
     height: 44px;
     border-radius:50%;
     background-color: #fff;
+    /* transition: background-color var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function); */
     
 }
 .social-link-team:hover,
@@ -412,6 +428,8 @@ color:var(--accent-color);
     height: 92px;
     border: solid 1px var(--client-logo-border-color);
     border-radius: 4px;
+    /* transition: border var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function); */
 }
 .client-link:hover,
 .client-link:focus{
@@ -451,6 +469,7 @@ color:var(--accent-color);
     font-weight: 400;
     line-height: 1.72;
     color: var(--text-light-color);
+    /* transition: color var(--transition-duration) var(--transition-timing-function); */
     }
     .item-phone-number{
         margin-bottom: 9px;
@@ -458,11 +477,14 @@ color:var(--accent-color);
 .footer-phone-number{
     font-weight: 400;
     line-height: 1.72;
-    color: var(--footer-contact-color);}
+    color: var(--footer-contact-color);
+    /* transition: color var(--transition-duration) var(--transition-timing-function); */
+}
 .footer-email{
     font-weight: 400;
     line-height: 1.72;
     color: var(--footer-contact-color);
+    /* transition: color var(--transition-duration) var(--transition-timing-function); */
     }
     
 .location:hover,
@@ -495,6 +517,7 @@ color:var(--accent-color);
         align-items: center;
         justify-content: center;
         background-color: var(--footer-social-background-color);
+        transition: background-color var(--transition-duration) var(--transition-timing-function) ;
     }
     .footer-social-icon{
         fill: var(--footer-social-icon-color);
@@ -558,6 +581,8 @@ height: 0;}
 .box-link:focus
 { display: block;
     box-shadow: 0 4px 4px 0 var(--portfolio-card-hover-shadow);}
+
+
 .portfolio-card-down{
     border-left:solid 1px var(--portfolio-box-border-color) ;
     border-right:solid 1px var(--portfolio-box-border-color) ;
@@ -565,10 +590,33 @@ height: 0;}
     padding: 20px 24px;
   
 }
-.portfolio-img{
-
-
- }
+.portfolio-img-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.portfolio-img{}
+.box-link:focus .overlay{
+    transform: translateY(0);
+}
+.box-link:hover .overlay{
+    transform: translateY(0);
+}
+.overlay{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--text-light-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--overlay-background-color);
+    padding: 63px 24px;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform var(--transition-duration) var(--transition-timing-function) ;
+    }
 .portfolio-subtitle{
     color: var(--primary-text-dark-color);
     font-weight: 700;
