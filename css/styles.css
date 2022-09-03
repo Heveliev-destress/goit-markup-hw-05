@@ -123,7 +123,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
    color: var(--primary-text-dark-color);
-   /* transition: color var(--transition-duration) var(--transition-timing-function) ; */
+   transition: color var(--transition-duration) var(--transition-timing-function) ;
 
 }
 /* .menu-link:hover::after{
@@ -156,12 +156,14 @@ body {
     display: flex;
     align-items: center;
     column-gap: 10px;
-    /* transition: color var(--transition-duration) var(--transition-timing-function) ; */
+    transition: color var(--transition-duration) var(--transition-timing-function) ;
 
 }
 .icon-email{ 
     width:16px ; height: 12px;
-fill: var(--header-icon-color);}
+fill: var(--header-icon-color);
+transition: fill var(--transition-duration) var(--transition-timing-function);
+}
 
 .header-phone-number{
     font-weight: 500;
@@ -171,14 +173,14 @@ fill: var(--header-icon-color);}
     display: flex;
     column-gap: 10px;
     align-items: center;
-    /* transition: color 3s var(--transition-timing-function), 
-    fill 3s var(--transition-timing-function) ; */
+    transition: color var(--transition-duration)  var(--transition-timing-function);
 
 
 }
 .icon-phone{
     fill: var(--header-icon-color);
      width: 10px; height: 16px;
+     transition: fill var(--transition-duration) var(--transition-timing-function);
 
     }
 
@@ -242,8 +244,8 @@ color:var(--accent-color);
     letter-spacing: 0.06em;
     background-color: var(--modal-btn-background-color);
     color: var(--text-light-color);
-    /* transition: background-color var(--transition-duration) var(--transition-timing-function),
-    color var(--transition-duration) var(--transition-timing-function) ; */
+    transition: background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function) ;
   
 }
 .modal_open_btn:hover,
@@ -347,8 +349,7 @@ color:var(--accent-color);
     height: 44px;
     border-radius:50%;
     background-color: #fff;
-    /* transition: background-color var(--transition-duration) var(--transition-timing-function),
-    fill var(--transition-duration) var(--transition-timing-function); */
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
     
 }
 .social-link-team:hover,
@@ -364,6 +365,7 @@ color:var(--accent-color);
     width: 20px;
     height:20px ;
     fill: var(--team-social-color);
+    transition:fill var(--transition-duration) var(--transition-timing-function);
 
 }
     .team-one-persone{
@@ -418,6 +420,7 @@ color:var(--accent-color);
     width:106px ;
     height:60px ;
     fill: var(--client-logo-color);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .client-link{
@@ -428,8 +431,7 @@ color:var(--accent-color);
     height: 92px;
     border: solid 1px var(--client-logo-border-color);
     border-radius: 4px;
-    /* transition: border var(--transition-duration) var(--transition-timing-function),
-    fill var(--transition-duration) var(--transition-timing-function); */
+    transition: border var(--transition-duration) var(--transition-timing-function);
 }
 .client-link:hover,
 .client-link:focus{
@@ -469,7 +471,7 @@ color:var(--accent-color);
     font-weight: 400;
     line-height: 1.72;
     color: var(--text-light-color);
-    /* transition: color var(--transition-duration) var(--transition-timing-function); */
+    transition: color var(--transition-duration) var(--transition-timing-function);
     }
     .item-phone-number{
         margin-bottom: 9px;
@@ -478,13 +480,13 @@ color:var(--accent-color);
     font-weight: 400;
     line-height: 1.72;
     color: var(--footer-contact-color);
-    /* transition: color var(--transition-duration) var(--transition-timing-function); */
+    transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .footer-email{
     font-weight: 400;
     line-height: 1.72;
     color: var(--footer-contact-color);
-    /* transition: color var(--transition-duration) var(--transition-timing-function); */
+    transition: color var(--transition-duration) var(--transition-timing-function);
     }
     
 .location:hover,
@@ -554,7 +556,10 @@ height: 0;}
     border: solid 0  ;
     border-radius: 4px;
    padding: 6px 22px;
-   
+   transition: color var(--transition-duration) var(--transition-timing-function),
+   background-color var(--transition-duration) var(--transition-timing-function),
+   box-shadow var(--transition-duration) var(--transition-timing-function);
+
 
 
 }
@@ -576,10 +581,14 @@ height: 0;}
 .portfolio-project-box{
     max-width: 370px;
     flex-basis: calc((100%-30)/3) ;}
+    .box-link{
+        display: block;
+        transition: box-shadow var(--transition-duration) var(--transition-timing-function);
+    }
 
 .box-link:hover,
 .box-link:focus
-{ display: block;
+{ 
     box-shadow: 0 4px 4px 0 var(--portfolio-card-hover-shadow);}
 
 
