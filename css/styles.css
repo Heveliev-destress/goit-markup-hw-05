@@ -43,6 +43,7 @@
     --modal-close-btn-shadow-first-color:rgba(0, 0, 0, 0.12);
     --modal-close-btn-shadow-second-color:rgba(0, 0, 0, 0.14);
     --modal-close-btn-shadow-third-color:rgba(0, 0, 0, 0.2);
+    --features-text-backdrop-background-color:rgba(47, 48, 58, 0.8);
 
 }
 h1,
@@ -125,21 +126,32 @@ body {
     
     
 }
+/* .menu-link-box{
+    position: relative;
+
+} */
 .menu-link{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
    color: var(--primary-text-dark-color);
    transition: color var(--transition-duration) var(--transition-timing-function) ;
+   
 
 }
-/* .menu-link:hover::after{
+/* .menu-item::after{   
+     position: absolute;
     content: "";
     background-color: #000000;
     height: 4px;
-    display: block;
     border-radius: 2px;
+    left: 0;
+    bottom:0;
  
+
+} */
+/* .menu-link:hover::after{
+
 } */
 .menu-link:hover,
 .menu-link:focus
@@ -322,6 +334,27 @@ color:var(--accent-color);
     column-gap: 30px;
 }
 .features-img{}
+.features-img-box{
+    position: relative;
+
+}
+.features-text-backdrop{
+    background-color:var(--features-text-backdrop-background-color);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+}
+.features-text{
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-light-color);
+    padding: 27px 0;
+    }
+
 /*===/features===*/
 .team{
     background-color: var(--team-background-color);
