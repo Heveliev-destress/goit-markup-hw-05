@@ -126,33 +126,39 @@ body {
     
     
 }
-/* .menu-link-box{
-    position: relative;
+.menu-link-box{
 
-} */
-.menu-link{
+   
+
+}
+.menu-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
    color: var(--primary-text-dark-color);
    transition: color var(--transition-duration) var(--transition-timing-function) ;
-   
-
-}
-/* .menu-item::after{   
+    position: relative;
+    padding: 100% 0;
+    }
+.menu-link::after {   
      position: absolute;
     content: "";
-    background-color: #000000;
+    background-color: var(--accent-color);
     height: 4px;
+    width: 100%;
     border-radius: 2px;
     left: 0;
     bottom:0;
+    opacity: 0;
+    transition: opacity var(--transition-duration) var(--transition-timing-function);
+    
  
 
-} */
-/* .menu-link:hover::after{
-
-} */
+}
+.menu-link:hover::after{
+content: "";
+opacity: 1;
+}
 .menu-link:hover,
 .menu-link:focus
 {
