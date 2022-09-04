@@ -136,13 +136,24 @@ body {
     padding: 32px 0;
     display: block;
     }
-    /* .link.current::after{
+    .menu-link:hover::after,
+    .menu-link:focus::after{
         width: 100%;
+        border-radius: 2px;
         height: 4px;
         position: absolute;
         content: "";
         background-color: var(--accent-color);
-    } */
+        opacity: 0;
+        transition: opacity var(--transition-duration) var(--transition-timing-function);
+        left: 0;
+        bottom:0;
+      
+    }
+    .menu-link:hover::after,
+    .menu-link:focus::after{
+        opacity: 1;
+        }
 .current::after {   
      position: absolute;
     content: "";
@@ -152,17 +163,13 @@ body {
     border-radius: 2px;
     left: 0;
     bottom:0;
-    /* opacity: 0;
-    transition: opacity var(--transition-duration) var(--transition-timing-function); */
+  
     
  
 
 }
 
-/* .menu-link:hover::after{
-content: "";
-opacity: 1;
-} */
+
 .menu-link:hover,
 .menu-link:focus
 {
