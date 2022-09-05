@@ -366,10 +366,13 @@ color:var(--accent-color);
 .features-text{
     font-weight: 700;
     line-height: 1.14;
-    text-align: center;
+display:flex ;
+height: 70px;
+align-items: center;
+justify-content: center;
     text-transform: uppercase;
     color: var(--text-light-color);
-    padding: 27px 0;
+   
     }
 
 /*===/features===*/
